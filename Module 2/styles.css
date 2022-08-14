@@ -22,7 +22,9 @@ input {
     padding-left: 30px;
     font-size: 16px;
 }
-
+#per-web{
+    text-align: center;
+}
 button {
     box-sizing: border-box;
     margin-top: 0;
