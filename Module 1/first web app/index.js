@@ -11,8 +11,8 @@ const loadData = (options) => {
     .then(function(response){
         return response.json()
     })
-    .then(function(data){ 
-       if (options.onSuccess) options.onSuccess(data)
+    .then(function (data) {
+      if (options.onSuccess) options.onSuccess(data)
     })
 }
 
@@ -24,12 +24,12 @@ const App = (props) => {
   let [query, setQuery] = useState("vampires");
   const queryInput = useRef(null);
 
-  const numberOfPhotos = 20; 
-  const url =
-    "https://api.unsplash.com/photos/random/?count=" +
-    numberOfPhotos +
+  const numberOfPhotos = 20;
+  const url = "https://api.unsplash.com/photos/random/?count="
+    + numberOfPhotos +
     "&client_id=" +
     clientID;
+
 
   useEffect(() => {
     const photosUrl = query ? `${url}&query=${query}` : url;
@@ -79,7 +79,4 @@ const App = (props) => {
 };
 
 // CHALLENGE: add your own name and emoji to the website
-// ReactDOM.render(<App name="Someone" emoji="👋"/>, document.getElementById("root"));
-
-// bring emoji from getemoji.com
-ReactDOM.render(<App name="Yasabneh" emoji="🤣"/>, document.getElementById("root"));
+ReactDOM.render(<App name="Yasabneh" emoji="🎉"/>, document.getElementById("root"));
